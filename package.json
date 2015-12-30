@@ -1,24 +1,18 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
-    "name": "isotropy",
-    "version": "6.0.1",
-    "description": "Loader for Isotropy applications.",
+    "name": "isotropy-browser",
+    "version": "0.0.1",
+    "description": "Loader for Isotropy applications (Browser).",
     "scripts": {
-        "update-schema": "node ./dist/scripts/updateSchema.js",
         "test": "mocha dist/test/test.js"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jeswin/isotropy.git"
+        "url": "https://github.com/jeswin/isotropy-browser.git"
     },
-    "main": "dist/isotropy",
+    "main": "dist/isotropy-browser",
     "license": "MIT",
     "dependencies": {
-        "isotropy-mount": "*",
-        "isotropy-plugin-static": "*",
-        "isotropy-plugin-webapp": "*",
-        "isotropy-plugin-graphql": "*",
-        "isotropy-plugin-react": "*"
     },
     "devDependencies": {
         "koa": "2.0.0-alpha.3",
