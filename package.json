@@ -15,11 +15,15 @@
     "dependencies": {
     },
     "devDependencies": {
-        "koa": "2.0.0-alpha.3",
-        "express": "*",
         "express-graphql": "*",
         "graphql": "*",
         "graphql-relay": "*",
+        "isotropy": "*",
+        "jsdom": "*",
+        "json-loader": "*",
+        "koa": "2.0.0-alpha.3",
+        "koa-in-browser": "*",
+        "express": "*",
         "babel-polyfill": "*",
         "babel-preset-es2015": "*",
         "babel-preset-react": "*",

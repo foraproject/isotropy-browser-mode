@@ -1,5 +1,5 @@
 /* @flow */
-import koa from "koa";
+import type { KoaType } from "koa-in-browser";
 import mount from "isotropy-mount";
 import reactPlugin from "isotropy-plugin-react";
 
@@ -21,14 +21,12 @@ type PluginOptions = {
 type IsotropyOptionsType = {
     dir: string,
     port: number,
-    plugins: Plugins,
-    defaultInstance: KoaType
+    plugins: Plugins
 };
 
-const isotropy = async function(apps: Object, options: IsotropyOptionsType) : Promise {
+const isotropy = async function(apps: Object, options: IsotropyOptionsType) : Promise<IsotropyResultType> {
     const dir = options.dir || __dirname;
     const port = options.port || 8080;
-    const defaultInstance: KoaType = options.defaultInstance || new koa();
     const plugins: Plugins = options.plugins || {};
 
     plugins["react"] = reactPlugin;
@@ -44,7 +42,6 @@ const isotropy = async function(apps: Object, options: IsotropyOptionsType) : Pr
         if (appSettings.path === "/") {
             await plugin.setup(appSettings, defaultInstance, pluginOptions);
         } else {
-            const newInstance = new koa();
             await plugin.setup(appSettings, newInstance, pluginOptions);
             defaultInstance.use(mount(appSettings.path, newInstance));
         }
@@ -54,6 +51,10 @@ const isotropy = async function(apps: Object, options: IsotropyOptionsType) : Pr
     if (!options.defaultInstance) {
         defaultInstance.listen(port);
     }
+
+    return {
+        koa: defaultInstance
+    };
 };
 
 export default isotropy;
