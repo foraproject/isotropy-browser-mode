@@ -1,6 +1,6 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
-    "name": "isotropy-browser",
+    "name": "isotropy-browser-mode",
     "version": "0.0.1",
     "description": "Loader for Isotropy applications (Browser).",
     "scripts": {
@@ -8,9 +8,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jeswin/isotropy-browser.git"
+        "url": "https://github.com/jeswin/isotropy-browser-mode.git"
     },
-    "main": "dist/isotropy-browser",
+    "main": "dist/isotropy-browser-mode",
     "license": "MIT",
     "dependencies": {
     },
