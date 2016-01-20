@@ -4,19 +4,19 @@ import isotropy from "../isotropy-browser";
 import MyComponent from "./react/my-component";
 
 export default async function() {
-    //Configure server
-    const appConfig = [
-        {
-            type: "react",
-            module: {
-                routes: [
-                    { url: `/books/:id`, method: "GET", component: MyComponent }
-                ]
-            },
-            path: "/"
-        }
-    ];
+  //Configure server
+  const appConfig = [
+    {
+      type: "react",
+      module: {
+        routes: [
+          { url: `/books/:id`, method: "GET", component: MyComponent }
+        ]
+      },
+      path: "/"
+    }
+  ];
 
-    const port = process.argv.length >= 3 ? process.argv[2] : 1950;
-    return await isotropy(appConfig, __dirname, port);
+  const port = process.argv.length >= 3 ? process.argv[2] : 1950;
+  return await isotropy(appConfig, __dirname, port);
 };
