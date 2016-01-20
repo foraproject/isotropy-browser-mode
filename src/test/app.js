@@ -29,11 +29,11 @@ export default async function() {
               </div>
             </body>
           </html>
-          `);
-        }
+        `);
       }
-    ];
+    }
+  ];
 
-    const port = process.argv.length >= 3 ? process.argv[2] : 1950;
-    return await isotropy(appConfig, __dirname, port);
-  };
+  const port = process.argv.length >= 3 ? process.argv[2] : 1950;
+  return await isotropy(appConfig, __dirname, port);
+};

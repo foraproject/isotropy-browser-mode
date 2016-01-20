@@ -1,6 +1,6 @@
 import "babel-polyfill";
 
-import isotropy from "../isotropy-browser";
+import isotropy from "../isotropy-browser-mode";
 import MyComponent from "./react/my-component";
 
 export default async function() {

@@ -1,5 +1,5 @@
 /* @flow */
-import type { KoaType } from "koa-in-browser";
+import type { KoaType } from "./flow/koa-types";
 import mount from "isotropy-mount";
 import reactPlugin from "isotropy-plugin-react";
 
@@ -22,6 +22,10 @@ type IsotropyOptionsType = {
   dir: string,
   port: number,
   plugins: Plugins
+};
+
+export type IsotropyResultType = {
+  koa: KoaType
 };
 
 const isotropy = async function(apps: Object, options: IsotropyOptionsType) : Promise<IsotropyResultType> {
