@@ -5,9 +5,12 @@ module.exports = {
     path: __dirname + "/dist",
     filename: "bundle.js"
   },
+  plugins: [
+  ],
   resolve: {
     "isotropy-plugin-react": "isotropy-plugin-react-browser",
-    "koa": "koa-in-browser"
+    "isotroy-body": "isotroy-body-in-browser",
+    "http": "isotropy-http-in-browser"
   },
   module: {
     loaders: [
