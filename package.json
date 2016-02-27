@@ -23,6 +23,7 @@
     "isotropy-middleware-body": "*"
   },
   "devDependencies": {
+    "jsdom": "*",
     "graphql": "*",
     "graphql-relay": "*",
     "babel-polyfill": "*",
