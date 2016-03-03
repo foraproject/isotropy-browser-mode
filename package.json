@@ -20,7 +20,8 @@
     "isotropy-plugin-graphql": "*",
     "isotropy-plugin-react": "*",
     "isotropy-middleware-url": "*",
-    "isotropy-middleware-body": "*"
+    "isotropy-middleware-body": "*",
+    "isotropy-interfaces": "*"
   },
   "devDependencies": {
     "jsdom": "*",

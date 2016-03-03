@@ -4,7 +4,7 @@ import urlMiddleware from "isotropy-middleware-url";
 import bodyMiddleware from "isotropy-middleware-body";
 import Router from "isotropy-router";
 import type { IsotropyOptionsType, IsotropyResultType } from "isotropy-core";
-import type { IncomingMessage, ServerResponse, Server } from "./flow/http";
+import type { IncomingMessage, ServerResponse, Server } from "isotropy-interfaces/node/http-in-browser";
 
 type IsotropyFnType = (apps: Object, options: IsotropyOptionsType) => Promise<IsotropyResultType>;
 
